@@ -6,10 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home Page</title>
+<title>Fruit Page</title>
 </head>
 <body>
-	<h1>Hello World</h1>
-	<h2><c:out value="${2+2}"/></h2>
+<%-- 	<h1>Hello World</h1>
+	<h2><c:out value="${2+2}"/></h2> --%>
+	
+	<h1>Two plus two is:</h1>
+	<h2><c:out value="${fruit}"/></h2>
+	
+	
 </body>
 </html>
