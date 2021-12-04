@@ -25,6 +25,8 @@ public class HomeController {
 		model.addAttribute("email", email);
 		model.addAttribute("age", age);
 		
+		
+		
 		return "index.jsp";
 		
 
