@@ -23,23 +23,28 @@
 	<h2><c:out value="${2+2}"/></h2> --%>
 	
 	<div class="container">
-	<h1 class="text-light">Two plus two is:</h1>
-	<h2>
-		<c:out value="${fruit}" />
-	</h2>
-
-	<h2>
-		<c:out value="${firstName}" />
-	</h2>
-	<h2>
-		<c:out value="${lastName}" />
-	</h2>
-	<h2>
-		<c:out value="${email}" />
-	</h2>
-	<h2>
-		<c:out value="${age}" />
-	</h2>
+		<h1 class="text-dark">Dojo Location</h1>
+			<!-- this will only run if dojoList pass in -->
+			<c:forEach var="dojo" items="${ dojosList }">
+				<p> <c:out value="${ dojo }"/> </p>
+			</c:forEach>
+		<!-- h2 will still create but if route not providing value it'll be empty tag -->
+		<h2>
+			<c:out value="${fruit}" />
+		</h2>
+	
+		<h2>
+			<c:out value="${firstName}" />
+		</h2>
+		<h2>
+			<c:out value="${lastName}" />
+		</h2>
+		<h2>
+			<c:out value="${email}" />
+		</h2>
+		<h2>
+			<c:out value="${age}" />
+		</h2>
 	</div>
 
 

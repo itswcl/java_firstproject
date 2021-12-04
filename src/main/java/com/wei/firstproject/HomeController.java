@@ -1,5 +1,7 @@
 package com.wei.firstproject;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,19 @@ public class HomeController {
 		model.addAttribute("email", email);
 		model.addAttribute("age", age);
 		
+		return "index.jsp";
+		
+
+	}
+	@RequestMapping("/dojos")
+	public String indexDojo(Model model) {
+		ArrayList<String> dojos = new ArrayList<String>();
+		
+		dojos.add("Brubank");
+		dojos.add("Chicago");
+		dojos.add("Bellevue");
+		
+		model.addAttribute("dojosList", dojos);
 		return "index.jsp";
 	}
 //	// function(annotation(query field, required=false)  String input)
