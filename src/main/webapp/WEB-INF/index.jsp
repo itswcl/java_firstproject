@@ -15,6 +15,12 @@
 	<h1>Two plus two is:</h1>
 	<h2><c:out value="${fruit}"/></h2>
 	
+	<h2><c:out value="${firstName}"/></h2>
+	<h2><c:out value="${lastName}"/></h2>
+	<h2><c:out value="${email}"/></h2>
+	<h2><c:out value="${age}"/></h2>
+	
+	
 	
 </body>
 </html>

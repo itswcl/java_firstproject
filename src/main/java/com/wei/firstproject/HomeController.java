@@ -13,6 +13,16 @@ public class HomeController {
 	public String index(Model model) {
 		model.addAttribute("fruit", "banana");
 		
+		String firstName = "Ada";
+		String lastName = "Lovelace";
+		String email = "ones@zeroes.com";
+		Integer age = 160;
+		
+		model.addAttribute("firstName", firstName);
+		model.addAttribute("lastName", lastName);
+		model.addAttribute("email", email);
+		model.addAttribute("age", age);
+		
 		return "index.jsp";
 	}
 //	// function(annotation(query field, required=false)  String input)
