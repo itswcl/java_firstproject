@@ -2,6 +2,8 @@ package com.wei.firstproject;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +12,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RestController
 //@RequestMapping("/hello")
 public class HomeController {
+	
+	public String indexSession(HttpSession session) {
+		// check if session not exist will return null
+		if (session.getAttribute("count") == null) {
+			session.setAttribute("count", 0);
+			
+		} else {
+		// exist then get the count time and turn to interger
+			Integer currentCount = (Integer) session.getAttribute("count");
+			// set the session attribute of count to plus 1;
+			session.setAttribute("count", currentCount++);			
+		}
+		
+		return "index.jsp";
+	}
+	
+	public String showCount(HttpSession session, Model model) {
+		
+		Integer currentCount = (Integer) session.getAttribute("count");
+		model.addAttribute("countToShow", currentCount);
+		
+		return "showCount.jsp";
+	}
 	
 	@RequestMapping("/")
 	public String index(Model model) {
